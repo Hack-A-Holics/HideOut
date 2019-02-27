@@ -34,7 +34,8 @@
 
         <activity android:name=".DetailsActivity"
             android:label="Details"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeActivity"/>
 
         <activity android:name=".FeedbackActivity"
             android:label="Feedback"

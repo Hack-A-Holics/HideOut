@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,21 +12,58 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import java.util.ArrayList;
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-import static java.sql.Types.NULL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    //Variables for Firebase Authentication
+    private FirebaseAuth mFirebaseAuth;
+    public static final int RC_SIGN_IN = 1;
+    private FirebaseAuth.AuthStateListener mAuthStateListner;
+
+    List<AuthUI.IdpConfig> providers = Arrays.asList(
+            new AuthUI.IdpConfig.GoogleBuilder().build(),
+            new AuthUI.IdpConfig.PhoneBuilder().build());
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nav_home);
 
+        //Code for authentication
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mAuthStateListner = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+
+                }else{
+                    startActivityForResult(
+                            AuthUI.getInstance()
+                                    .createSignInIntentBuilder()
+                                    .setIsSmartLockEnabled(false)
+                                    .setAvailableProviders(providers)
+                                    .setLogo(R.drawable.hideout_logo)
+                                    .setTheme(R.style.LoginTheme)
+                                    .build(),
+                            RC_SIGN_IN
+                    );
+                }
+            }
+        };
+        setContentView(R.layout.nav_home);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -38,7 +74,7 @@ public class HomeActivity extends AppCompatActivity
         locations.add(new Property(R.drawable.home, "name", "address", 4500, "3 km away"));
         locations.add(new Property(R.drawable.home, "name", "address", 350, "3 km away"));
         locations.add(new Property(R.drawable.home, "name", "address", 350, "3 km away"));
-        locations.add(new Property(NULL, "name", "address", 350, "3 km away"));
+        locations.add(new Property(R.drawable.hideout_logo, "name", "address", 350, "3 km away"));
 
         PropertyAdapter adapter = new PropertyAdapter(getApplicationContext(), locations);
         ListView listView = findViewById(R.id.list_view);
@@ -63,12 +99,14 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
 
     @Override
     public void onBackPressed() {
 
-        moveTaskToBack(true);
+        finish();
     }
 
     @Override
@@ -93,6 +131,19 @@ public class HomeActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mFirebaseAuth.addAuthStateListener(mAuthStateListner);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mFirebaseAuth.removeAuthStateListener(mAuthStateListner);
+
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -111,16 +162,13 @@ public class HomeActivity extends AppCompatActivity
 
         } else if (id == R.id.action_logout) {
 
-//            AuthUI.getInstance()
-//                    .signOut(this)
-//                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-//                        public void onComplete(@NonNull Task<Void> task) {
-//                            Intent i = new Intent(getApplicationContext(),SplashScreen.class);
-//                            startActivity(i);
-//                            //finish();
-//                        }
-//                    });
-            finish();
+            AuthUI.getInstance()
+                    .signOut(this)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        public void onComplete(@NonNull Task<Void> task) {
+                            finish();
+                        }
+                    });
 
         } else if (id == R.id.settings) {
 
