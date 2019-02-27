@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="availableFor">
+        <item>--Available For--</item>
+        <item>Boys</item>
+        <item>Girls</item>
+        <item>Family</item>
+    </string-array>
+
+    <string-array name="facing">
+        <item>--Facing--</item>
+        <item>East</item>
+        <item>West</item>
+        <item>North</item>
+        <item>South</item>
+        <item>North-East</item>
+        <item>North-West</item>
+        <item>South-East</item>
+        <item>South-west</item>
+    </string-array>
+
+    <string-array name="forR">
+        <item>--For--</item>
+        <item>Rent</item>
+        <item>Mortgage</item>
+    </string-array>
+
+    <string-array name="propertyType">
+        <item>--Property Type--</item>
+        <item>Flat</item>
+        <item>Room</item>
+        <item>Villa</item>
+        <item>House</item>
+    </string-array>
+</resources>

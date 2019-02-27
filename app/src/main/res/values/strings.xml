@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name" translatable="false">Hide Out</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">HideOut</string>
+    <string name="nav_header_subtitle">userName</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="action_Logout">Logout</string>
+
+    <string name="title_activity_Home">Home</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_MyAdd">My Advertisement</string>
+    <string name="title_activity_aboutUs">About Us</string>
+    <string name="title_activity_contactUs">Contact Us</string>
+
+    <string name="searchLocation">Search Location</string>
+    <string name="filter">Filter</string>
+    <string name="sortBy">Sort By</string>
+    <string name="myProperty">My Property</string>
+    <string name="communicate">Communicate</string>
+    <string name="myWishList">My WishList</string>
+    <string name="setAlert">Set Alert</string>
+    <string name="rateUs">Rate Us</string>
+    <string name="feedback">Feedback</string>
+    <string name="action_property">Property</string>
+    <string name="rating">Rating</string>
+
+    <string name="images">Images</string>
+    <string name="name">Name </string>
+    <string name="price">Price : </string>
+    <string name="address">Address :</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="email">E-mail</string>
+    <string name="bedrooms_status">Bedrooms : </string>
+    <string name="furnished_status">Furnished </string>
+    <string name="carParking_status">Car Parking </string>
+    <string name="bathrooms">Bathrooms :</string>
+    <string name="available_From">Available From : </string>
+    <string name="available_for"> Available For </string>
+    <string name="facing">Facing</string>
+    <string name="veg_status">Non Veg</string>
+    <string name="alcohol_status">Alcohol</string>
+    <string name="Description">Description : </string>
+    <string name="things_permitted">Things Permitted : </string>
+    <string name="facilities">Facilities : </string>
+
+    <string name="digit">5</string>
+    <string name="date">Today</string>
+    <string name="boys">Boys</string>
+    <string name="girls">Girls</string>
+    <string name="family">Family</string>
+    <string name="allowed">Allowed</string>
+    <string name="not_allowed">Not Allowed</string>
+    <string name="furnished">Furnished</string>
+    <string name="unfurnished">Unfurnished</string>
+    <string name="north_east">North - East</string>
+    <string name="rent">Rent</string>
+    <string name="for_">For</string>
+    <string name="mortgage">Mortgage</string>
+    <string name="distance">3 Km From Your Location</string>
+    <string name="share">Share Via :</string>
+    <string name="report">Report This Add</string>
+    <string name="whatsApp">WhatsApp</string>
+    <string name="facebook">Facebook</string>
+    <string name="message">Message</string>
+    <string name="upload">upload Photos</string>
+    <string name="property_type">Property Type</string>
+    <string name="available">Available</string>
+    <string name="flat">Flat</string>
+
+
+    <string name="noOfBathrooms">No of Bathrooms</string>
+    <string name="title_activity_my_add">My Advertisements</string>
+    <string name="action_settings">About Us</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Discard</string>
+    <string name="title_activity_my_wish_list">My WishList</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="feedback_hint">Send Feedback to us to improve the user Experience</string>
+    <string name="send_feedback">Send Feedback</string>
+
+
+</resources>

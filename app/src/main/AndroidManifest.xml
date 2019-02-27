@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hackoholics.hideout">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".AddNewPropertyActivity"
+            android:label="Add Property"
+            android:parentActivityName=".MyPropertiesActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".BookmarksActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Bookmarks"/>
+
+        <activity android:name=".DetailsActivity"
+            android:label="Details"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".FeedbackActivity"
+            android:label="Feedback"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeActivity"/>
+
+        <activity android:name=".MyPropertiesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="My Properties"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "120015134412",
+    "firebase_url": "https://hideout-ef1e2.firebaseio.com",
+    "project_id": "hideout-ef1e2",
+    "storage_bucket": "hideout-ef1e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120015134412:android:d8e1063e03a50499",
+        "android_client_info": {
+          "package_name": "com.hackoholics.hideout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120015134412-m233m80nf4dil48uonfqcnqb46s5qkp1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hackoholics.hideout",
+            "certificate_hash": "c3c24a91e753dbf49222c93308f149d9d20b6c6e"
+          }
+        },
+        {
+          "client_id": "120015134412-f13ec9i8surb22eeiueu4kp8mbfd7lhd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgVoXwOxLYtjcqGpil7GXmIAQXObsoxUM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120015134412-f13ec9i8surb22eeiueu4kp8mbfd7lhd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        tools:context=".AddNewProperty">
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/editTextFontStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                style="@style/font_style_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/price"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/editTextFontStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                style="@style/font_style_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/address"
+                android:imeOptions="actionNext"
+                android:inputType="textPostalAddress"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/editTextFontStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                style="@style/font_style_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/bedrooms_status"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/editTextFontStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                style="@style/font_style_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/bathrooms"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/editTextFontStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                style="@style/font_style_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/available_From"
+                android:imeOptions="actionDone"
+                android:inputType="date"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHighlight="@color/font_color" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            style="@style/font_style_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_fixed"
+            android:text="@string/things_permitted" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                style="@style/font_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@drawable/cb_selector"
+                android:text="@string/veg_status" />
+
+            <CheckBox
+                style="@style/font_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@drawable/cb_selector"
+                android:text="@string/alcohol_status" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/font_style_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_fixed"
+            android:text="@string/facilities" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                style="@style/font_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@drawable/cb_selector"
+                android:text="@string/carParking_status" />
+
+            <CheckBox
+                style="@style/font_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@drawable/cb_selector"
+                android:text="@string/furnished_status" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/availableFor"
+            style="@style/font_style_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:background="@color/background_color"
+            android:spinnerMode="dialog" />
+
+        <Spinner
+            android:id="@+id/facing"
+            style="@style/font_style_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:background="@color/background_color"
+            android:spinnerMode="dialog" />
+
+        <Spinner
+            android:id="@+id/forR"
+            style="@style/font_style_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:background="@color/background_color"
+            android:spinnerMode="dialog" />
+
+        <Spinner
+            android:id="@+id/property_type"
+            style="@style/font_style_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:background="@color/background_color"
+            android:spinnerMode="dialog" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/images" />
+
+            <Button
+                style="?android:attr/buttonStyleInset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:onClick="uploadPics"
+                android:textSize="12sp"
+                android:text="@string/upload" />
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/editTextFontStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+            <AutoCompleteTextView
+                style="@style/font_style_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|start"
+                android:hint="@string/Description"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+</ScrollView>

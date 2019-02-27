@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:title="@string/title_activity_Home" />
+        <item
+            android:id="@+id/myProperty"
+            android:icon="@drawable/myadd"
+            android:title="@string/myProperty" />
+        <item
+            android:id="@+id/myWishList"
+            android:icon="@drawable/wishlist"
+            android:title="@string/myWishList" />
+    </group>
+
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/myProfile"
+            android:icon="@drawable/profile"
+            android:title="@string/title_activity_profile" />
+
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/settings"
+            android:title="@string/action_settings" />
+        <item
+            android:id="@+id/feedback"
+            android:icon="@drawable/feedback"
+            android:title="@string/feedback" />
+        <item
+            android:id="@+id/rateUs"
+            android:icon="@drawable/rating"
+            android:title="@string/rateUs" />
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/share" />
+        <item
+            android:id="@+id/action_logout"
+            android:icon="@drawable/logout"
+            android:title="@string/action_Logout"
+            />
+    </group>
+</menu>
